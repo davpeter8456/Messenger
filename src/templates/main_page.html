@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Messenger</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/style1.css') }}"
+        />
+    </head>
+    <body>
+        <h1>Messenger</h1>
+        <p>If you have an account, log in to it.</p>
+        <form action="{{ url_for('web.log_in') }}">
+            <input type="submit" value="Log in" />
+        </form>
+        <p>If you don't have an account, then create one.</p>
+        <form action="{{ url_for('web.sign_up') }}">
+            <input type="submit" value="Sign up" />
+        </form>
+    </body>
+</html>
